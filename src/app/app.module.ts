@@ -12,15 +12,14 @@ import { LoginComponent } from './login/login.component';
 
 const appRoutes:Routes=[
   // {path:'',redirectTo:'Home',pathMatch:'full'},
-  // {path:'Home',component: HomeComponent}, 
-  // {path:'Contact',component: ContactComponent},
+  {path:'Login',component: LoginComponent}, 
+  
  
   ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    
     LoginComponent
   ],
   imports: [
