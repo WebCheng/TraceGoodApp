@@ -2,7 +2,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {LoginComponent} from './components/login/login.component';
@@ -16,7 +15,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
-const appRoutes: Routes = [];
+const appRoutes: Routes = [
+
+{path:'Login',component: LoginComponent}, 
+];
 
 @NgModule({
     declarations: [
@@ -30,6 +32,7 @@ const appRoutes: Routes = [];
             appRoutes,
             {enableTracing: true} // <-- debugging purposes only
         ),
+       
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
@@ -40,7 +43,8 @@ const appRoutes: Routes = [];
         ReactiveFormsModule,
     ],
     bootstrap: [
-        AppComponent
+        AppComponent,
+        LoginComponent
     ]
 })
 export class AppModule {
