@@ -3,8 +3,10 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {LoginComponent} from './components/login/login.component';
+import {AppComponent,DialogDataExampleDialog} from './app.component';
+
+//import {LoginComponent} from './components/login/login.component';
+
 import {HotelListComponent} from './components/hotel-list/hotel-list.component';
 import {HotelCardComponent} from './components/hotel-card/hotel-card.component';
 
@@ -17,15 +19,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
 
-{path:'Login',component: LoginComponent}, 
+// {path:'Login',component: LoginComponent}, 
 ];
 
 @NgModule({
     declarations: [
         AppComponent,
-        LoginComponent,
+        //LoginComponent,
         HotelListComponent,
-        HotelCardComponent
+        HotelCardComponent,
+        DialogDataExampleDialog
+
     ],
     imports: [
         RouterModule.forRoot(
@@ -42,10 +46,16 @@ const appRoutes: Routes = [
         MatNativeDateModule,
         ReactiveFormsModule,
     ],
+
+    entryComponents: [
+    AppComponent, DialogDataExampleDialog],
+
     bootstrap: [
         AppComponent,
-        LoginComponent
+       // LoginComponent
     ]
+
+   
 })
 export class AppModule {
 }

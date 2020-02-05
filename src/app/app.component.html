@@ -1,6 +1,5 @@
 
 
-
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
     <img
@@ -11,10 +10,13 @@
     <span>TraceGood</span>
     <div class="spacer"></div>
    
-    <a id="toolbar-link"[routerLink]="['/Login']" routerLinkActive="active">Login</a> 
+   <!--  <a id="toolbar-link"[routerLink]="['/Login']" routerLinkActive="active">Login</a>  -->
    <!--  <a id="toolbar-link" [routerLink]="['/Login']" routerLinkActive="active">Signup</a>
-   
  -->
+
+    <button mat-button (click)="openDialog()">Open dialog</button>
+
+    
     <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular"
        title="Twitter">
 
