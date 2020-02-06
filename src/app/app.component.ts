@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -22,12 +22,13 @@ export class AppComponent {
 @Component({
   selector: 'dialog-content-example-dialog',
   templateUrl: 'dialog-content-example-dialog.html',
-})
-export class DialogDataExampleDialog  {}
+  styleUrls: ['dialog-content-example-dialog.css']
+
+})	
+export class DialogDataExampleDialog  {
 
 
-// @Component({
-//   selector: 'login-component-contain',
-//   templateUrl: 'login-component-contain.html',
-// })
-// export class LoginComponentContain {}
+ 
+}
+
+

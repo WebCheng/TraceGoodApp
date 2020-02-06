@@ -9,7 +9,7 @@
         display: flex;
         align-items: center;
     
-        background-color: #dcd614;
+        background-color: #483ede;
         color: white;
 
         font-weight: 600;
@@ -27,8 +27,6 @@
     .toolbar #twitter-logo:hover {
         opacity: 0.8;
     }
-
-
 
 
 

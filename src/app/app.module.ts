@@ -1,7 +1,8 @@
+// import './polyfills';
+
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent,DialogDataExampleDialog} from './app.component';
 
@@ -16,21 +17,21 @@ import {MatNativeDateModule} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-
 const appRoutes: Routes = [
 
-// {path:'Login',component: LoginComponent}, 
+ // {path:'Login',component: LoginComponent}, 
 ];
 
 @NgModule({
     declarations: [
         AppComponent,
-        //LoginComponent,
+        DialogDataExampleDialog,
         HotelListComponent,
         HotelCardComponent,
-        DialogDataExampleDialog
+       
 
     ],
+
     imports: [
         RouterModule.forRoot(
             appRoutes,
@@ -48,14 +49,21 @@ const appRoutes: Routes = [
     ],
 
     entryComponents: [
-    AppComponent, DialogDataExampleDialog],
+    AppComponent, 
+    DialogDataExampleDialog
+
+    ],
 
     bootstrap: [
         AppComponent,
-       // LoginComponent
+       
+       DialogDataExampleDialog
     ]
 
    
 })
 export class AppModule {
 }
+
+// platformBrowserDynamic().bootstrapModule(AppModule)
+//   .catch(err => console.error(err));
