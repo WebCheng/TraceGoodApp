@@ -4,10 +4,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
-import {AppComponent,DialogDataExampleDialog} from './app.component';
+import {AppComponent} from './app.component';
 
-//import {LoginComponent} from './components/login/login.component';
-
+import {LoginComponent} from './components/login/login.component';
 import {HotelListComponent} from './components/hotel-list/hotel-list.component';
 import {HotelCardComponent} from './components/hotel-card/hotel-card.component';
 
@@ -25,7 +24,8 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AppComponent,
-        DialogDataExampleDialog,
+        // DialogDataExampleDialog,
+        LoginComponent,    
         HotelListComponent,
         HotelCardComponent,
        
@@ -48,22 +48,20 @@ const appRoutes: Routes = [
         ReactiveFormsModule,
     ],
 
-    entryComponents: [
-    AppComponent, 
-    DialogDataExampleDialog
+    // entryComponents: [
+    // AppComponent, 
+    // DialogDataExampleDialog
 
-    ],
+    // ],
 
     bootstrap: [
         AppComponent,
        
-       DialogDataExampleDialog
+       // DialogDataExampleDialog
     ]
 
    
 })
-export class AppModule {
-}
+export class AppModule { }
 
-// platformBrowserDynamic().bootstrapModule(AppModule)
-//   .catch(err => console.error(err));
+

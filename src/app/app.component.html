@@ -13,7 +13,23 @@
     <span>TraceGood</span>
     <div class="spacer"></div>
    
-    <a id="toolbar-link" (click)="openDialog()" routerLinkActive="active">Login</a> 
+    <!-- <a id="toolbar-link" (click)="openDialog()" routerLinkActive="active">Login</a>  -->
+
+    <button (click)="onShow()">Middle</button>
+
+<app-login [(ngModel)]="showDialog" position="middle" name="visible" dialogTitle="这是标题">
+  <ng-container class="dialog-body">
+    <div>
+      <button class="full-width"
+        (click)="showDialog=false">关闭
+      </button>
+    </div>
+  </ng-container>
+  <ng-container class="dialog-footer">
+    <button>取消</button>
+    <button>确定</button>
+  </ng-container>
+</app-login>
    
     <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular"
        title="Twitter">
