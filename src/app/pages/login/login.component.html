@@ -1,1 +1,47 @@
-<h2>login works!</h2>
+
+
+<!-- 遮盖层 -->
+<div class="overlay" *ngIf="visible && showModal" (click)="visible = false"></div>
+
+<!-- dialog -->
+<div class="base-dialog" *ngIf="visible"
+     [ngClass]="['theme-'+ theme, 'position-' + position, 'size-' + size, visible ? 'show' : '']">
+  	<div class="dialog-content">
+   		 <div class="dialog-header">{{dialogTitle}}
+
+   		 </div>
+    	 <div class="dialog-body">
+      		
+      		<ng-content select=".dialog-body"></ng-content>
+    </div>
+ </div>
+
+
+
+
+<!-- 	<form class="form-login">
+		<div>
+			<h3>Please Log in here</h3>
+			
+			
+				<div >
+					<label for="Username" class="c">Username</label>
+					<input type="text" class="form-control">
+				</div>
+
+
+				<div>
+					<label for="Password" >Password</label>
+					<input type="text" class="form-control">
+				</div>
+
+		</div>
+	</form>		
+ -->
+
+<!-- <mat-dialog-actions align="end">
+	<button mat-button mat-dialog-close type="submit" >Login</button>
+	
+	<button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>  -->
+

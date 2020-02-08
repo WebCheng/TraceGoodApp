@@ -1,24 +1,9 @@
 import {Component} from '@angular/core';
 
-// import { MatDialog} from '@angular/material/dialog';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-
-
-    showDialog = false;
-
-    // showBottomDialog = false;
-
-    onShow() {
-        this.showDialog = true;
-    }
-
-    // onBottomShow() {
-    //   this.showDialog = true;
-    // }
-}
+export class AppComponent {}

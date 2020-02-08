@@ -5,9 +5,8 @@ import {Component, OnInit} from '@angular/core';
     templateUrl: './top-bar.component.html',
     styleUrls: ['./top-bar.component.css']
 })
-export class TopBarComponent implements OnInit {
 
-    showDialog = false;
+export class TopBarComponent implements OnInit {
 
     constructor() {
     }
@@ -15,8 +14,15 @@ export class TopBarComponent implements OnInit {
     ngOnInit() {
     }
 
+    showDialog = false;
+
+
     onShow() {
+        console.log('onShow called')
+        console.log('this.showDialog', this.showDialog)
         this.showDialog = true;
+        console.log('this.showDialog', this.showDialog)
     }
+
 
 }
