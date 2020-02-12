@@ -1,10 +1,10 @@
 
 
 <!-- 遮盖层 -->
-<div class="overlay" *ngIf="visible && showModal" (click)="visible = false"></div>
+<!-- <div class="overlay" *ngIf="visible && showModal" (click)="visible = false"></div>-->
 
 <!-- dialog -->
-<div class="base-dialog" *ngIf="visible"
+<!-- <div class="base-dialog" *ngIf="visible"
      [ngClass]="['theme-'+ theme, 'position-' + position, 'size-' + size, visible ? 'show' : '']">
   	<div class="dialog-content">
    		 <div class="dialog-header">{{dialogTitle}}
@@ -14,12 +14,12 @@
       		
       		<ng-content select=".dialog-body"></ng-content>
     </div>
- </div>
+ </div>  -->
 
 
 
 
-<!-- 	<form class="form-login">
+	<form class="form-login">
 		<div>
 			<h3>Please Log in here</h3>
 			
@@ -37,11 +37,6 @@
 
 		</div>
 	</form>		
- -->
 
-<!-- <mat-dialog-actions align="end">
-	<button mat-button mat-dialog-close type="submit" >Login</button>
-	
-	<button mat-button mat-dialog-close>Cancel</button>
-</mat-dialog-actions>  -->
+
 

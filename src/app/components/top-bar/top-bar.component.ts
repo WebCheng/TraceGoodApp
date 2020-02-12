@@ -14,15 +14,8 @@ export class TopBarComponent implements OnInit {
     ngOnInit() {
     }
 
-    showDialog = false;
+   
 
-
-    onShow() {
-        console.log('onShow called')
-        console.log('this.showDialog', this.showDialog)
-        this.showDialog = true;
-        console.log('this.showDialog', this.showDialog)
-    }
 
 
 }
