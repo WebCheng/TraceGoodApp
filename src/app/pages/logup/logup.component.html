@@ -1,12 +1,15 @@
 <div>
-	<form class="form-login">
+	<form (ng-submit)="onSubmit()" (formgroup)="logupForm">
 		<div>
-			<h3>Please Log in here</h3>
+			<h3>Log Up </h3>
 			
+			  <div *ngIf="invalidsignup&&submitted" class="alert alert-danger">
+        			Invalid email address. This email has already registered.
+      		  </div>
 			
 				<div >
-					<label for="Username" class="c">Username</label>
-					<input type="text" class="form-control">
+					<label for="Email" class="">Email</label>
+					<input type="email" id="email" class="form-control" formControl >
 				</div>
 
 
@@ -14,6 +17,21 @@
 					<label for="Password" >Password</label>
 					<input type="text" class="form-control">
 				</div>
+
+
+				<div>
+					<label for="Firstname" >Firstname</label>
+					<input type="text" class="form-control">
+				</div>
+
+				<div>
+					<label for="Lastname" >Lastname</label>
+					<input type="text" class="form-control">
+				</div>
+
+				
+
+
 
 		</div>
 	</form>		
