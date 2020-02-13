@@ -9,21 +9,11 @@
     
     <div class="spacer"></div>
 
-    <a >Login</a>
+    <a [routerLink]="['/Login']" routerLinkActive="active">Login
+    </a>
     
-<!-- 
-        <app-login [(ngModel)]="showDialog" position="middle" name="visible" dialogTitle="ttt">
-            <ng-container class="dialog-body">
-                <div>
-                    <button class="full-width"(click)="showDialog=false">关闭</button>
-                </div>
-            </ng-container>
-            
-            <ng-container class="dialog-footer">
-                <button>取消</button>
-                <button>确定</button>
-            </ng-container>
+   
+    <a [routerLink]="['/Logup']" routerLinkActive="active">Logup
+    </a>
 
-        </app-login> -->
 </div>
-

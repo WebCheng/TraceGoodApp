@@ -10,6 +10,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeComponent} from './pages/home/home.component';
 import {LoginComponent} from './pages/login/login.component';
 import {TopBarComponent} from './components/top-bar/top-bar.component';
+import {LogupComponent} from './pages/logup/logup.component';
+
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import {TopBarComponent} from './components/top-bar/top-bar.component';
         HomeComponent,
         LoginComponent,
         TopBarComponent,
+        LogupComponent,
     ],
 
     imports: [
@@ -26,6 +29,7 @@ import {TopBarComponent} from './components/top-bar/top-bar.component';
         BrowserAnimationsModule,
         FormsModule,
         HttpClientModule,
+       
         MaterialModule,
         MatNativeDateModule,
         ReactiveFormsModule,
