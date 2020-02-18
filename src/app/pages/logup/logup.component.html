@@ -3,15 +3,23 @@
 		<div>
 			<h3>Log Up </h3>
 			
-			  <div *ngIf="invalidsignup&&submitted" class="alert alert-danger">
+			<!-- Invalid email address -->
+			  <div *ngIf="invalidlogup&&submitted" class="alert alert-danger">
         			Invalid email address. This email has already registered.
       		  </div>
-			
+
+			<!-- List -->
 				<div >
 					<label for="Email" class="">Email</label>
-					<input type="email" id="email" class="form-control" formControl >
+					<input type="email" id="email" class="form-control" formControlName="email" >
 				</div>
 
+				<div *ngIf="logupForm.controls.email.touched && logupForm.controls.email.errors">
+				
+					<div *ngIf="logupForm.controls.email.errors.maxlength && !logupForm.controls.email.errors.required" class="alert alert-danger">
+           		 	The max length of username is 20
+          			</div>
+          		</div>	
 
 				<div>
 					<label for="Password" >Password</label>
@@ -30,9 +38,11 @@
 				</div>
 
 				
-
+	
 
 
 		</div>
 	</form>		
+
+	<button class="btn btn-lg btn-secondary btn-block mt-5" type="submit">Log up</button>
 </div>
